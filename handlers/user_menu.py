@@ -155,7 +155,6 @@ async def _text_router(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
     dep_label   = await get_button_label("deposit")
     wit_label   = await get_button_label("withdraw")
-    sup_label   = await get_button_label("support")
     proof_label = await get_button_label("proofs")
     tote_label  = await get_button_label("tote")
     myops_label = await get_button_label("myops")
@@ -164,8 +163,6 @@ async def _text_router(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         return await handle_deposit_btn(update, ctx)
     if text == wit_label:
         return await handle_withdraw_btn(update, ctx)
-    if text == sup_label:
-        return await handle_support_btn(update, ctx)
     if text == proof_label:
         return await handle_proofs_btn(update, ctx)
     if text == tote_label:
